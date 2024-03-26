@@ -51,7 +51,8 @@ export abstract class AbstractStandardMarker extends AbstractDomMarker {
         );
 
         if (isVisible) {
-            this.domElement.style.translate = `${position.x}px ${position.y}px 0px`;
+            // this.domElement.style.translate = `${position.x}px ${position.y}px 0px`;
+            this.domElement.style.transform = `translate3d(${position.x}px, ${position.y}px, 0px) scale(1, 1)`;
 
             this.applyScale({
                 zoomLevel,
